@@ -1,34 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Japanese Sign Language Interpreter
 
-## Getting Started
+Mobile application developed using Vue3, Monaca, Framework 7 and Teachable Machine, which recognises gestures from the Japanese Sign Language and converts them to Japanese text, with the possibility of translating them into English or Spanish.
 
-First, run the development server:
+This app is based on a template found here:
+[framework7-vue3-minimal](https://github.com/monaca-templates/framework7-vue3-minimal)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Tutorial
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+There is a tutorial available in Medium: [Create a simple Sign Language Recognition App using Teachable Machine, Monaca, Vue.js and Framework7](https://medium.com/p/31072c2456a4)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### How to use
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Fork or download the repository.
+3. Start the server locally with `npm run start`, or using Monaca.
 
-## Learn More
+### Testing
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+You need to build a [custom Monaca Debugger](https://en.docs.monaca.io/products_guide/debugger/installation/debugger_ios#building-a-custom-monaca-debugger) which contains [CanvasCamera](https://www.npmjs.com/package/com.virtuoworks.cordova-plugin-canvascamera) plugin.
