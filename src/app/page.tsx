@@ -1,6 +1,13 @@
 import Image from 'next/image'
+import useRouter from 'next/navigation'
+import React from 'react'
 
 export default function Home() {
+  const router = useRouter();
+  const handleButtonClick = () => {
+    router.push('/register');
+  };
+
   return (
     <div style={{width: 360, height: 800, position: 'relative', background: 'white'}}>
   <div style={{width: 360, height: 400, left: 0, top: 400, position: 'absolute'}}>
@@ -12,13 +19,17 @@ export default function Home() {
     <div style={{width: 134, height: 56, left: 30, top: 302, position: 'absolute'}}>
       <div style={{width: 134, height: 56, left: 0, top: 0, position: 'absolute', background: '#3DB2FF', borderRadius: 26.50, border: '2px #FFEDDA solid'}} />
       <div style={{width: 5, height: 11, left: 105, top: 23, position: 'absolute', border: '2px #FFEDDA solid'}}></div>
-      <div style={{left: 23, top: 15, position: 'absolute', textAlign: 'center', color: '#FFEDDA', fontSize: 17, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Register</div>
+      <button type="button" onClick={() => handleButtonClick('/register')}>
+        Register
+      </button>
     </div>
     <div style={{width: 134, height: 56, left: 197, top: 302, position: 'absolute'}}>
       <div style={{width: 134, height: 56, left: 0, top: 0, position: 'absolute', background: '#3DB2FF', borderRadius: 26.50, border: '2px #FFEDDA solid'}} />
       <div style={{width: 134, height: 56, left: 0, top: 0, position: 'absolute', background: 'white', borderRadius: 26.50}} />
       <div style={{width: 5, height: 11, left: 95, top: 23, position: 'absolute', border: '2px #3DB2FF solid'}}></div>
-      <div style={{left: 38, top: 15, position: 'absolute', textAlign: 'center', color: '#3DB2FF', fontSize: 17, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Login</div>
+      <button type="button" onClick={() => handleButtonClick('/login')}>
+        Login
+      </button>
     </div>
     <div style={{width: 69, height: 10, left: 146, top: 240, position: 'absolute'}}>
       <div style={{width: 29, height: 10, left: 0, top: 0, position: 'absolute', background: '#FFEDDA', borderRadius: 5}} />
